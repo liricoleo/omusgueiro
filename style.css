@@ -3,6 +3,13 @@ body{
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1SAeSyZUGERxs5ircctMMlyfDnpfMTbFxdg&usqp=CAU");
 }
 
+#tst1{
+    background-size: 200px 100px;
+    background-color: blue;
+    text-align: center;
+    font-size: 35px;
+}
+
 #a1{
     text-align: center;
 }
@@ -10,4 +17,28 @@ body{
 #ab1{
     font-style: italic;
     font-family: cursive;
+}
+
+#b1{
+    text-align: center;
+}
+
+
+
+#c1{
+    font-size: 50px;
+    transition: 2s;
+}
+
+#c2{
+    font-size: 50px;
+    transition: 2s;
+}
+
+#c1:hover{
+    font-size: 55px;;
+}
+
+#c2:hover{
+    font-size: 55px;
 }
