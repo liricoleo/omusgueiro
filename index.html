@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="/Imagens/favicon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="omusgueiro" href="style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
       .navbar.navbar-inverse{
           background-color: blue;
@@ -19,10 +19,10 @@
       }
       .navbar-brand{
           font-size: 50px;
+          transition: 2.5s;
       }
       .navbar-brand:hover{
           font-size: 60px;
-          transition: 3s;
       }
 
       #subhome1:hover {
@@ -63,17 +63,53 @@
               </nav>
             
         </div>
-    
-    
+
+        <div id="tst1">
+            TESTE #1
+        </div>
+
         <div id="home1">
             <img id="subhome1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTiJwizdp_7kK5GjDIVWsCEaLHINfAbehOkg&usqp=CAU" alt=""
             height="550" width="366">
+        </div>
+
+    </div>    
+
+    <div id="b1">
+        <button id="c1" onclick="animar()">
+            SUMIU
+        </button>
+        <button id="c2" onclick="animar2()">
+            VOLTO
+        </button>
+    </div>
+  
+  <script>
+      function animar(){
+          const texto = document.getElementById("home1")
+          if (texto.style.opacity === "1"){
+              texto.style.opacity = "0"
+          }else{
+              texto.style.opacity = "0"
+          }
+      }
+        
+            function animar2(){
+          const texto = document.getElementById("home1")
+          if (texto.style.opacity === "0"){
+              texto.style.opacity = "1"
+      }else{
+          texto.style.opacity = "1"
+      }
+  }
+  </script>
+    
+
+            </div>
 
 
         </div>
     
-    
-    </div>
     
 </body>
 </html>
