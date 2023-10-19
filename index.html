@@ -2,88 +2,62 @@
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
-    <title>CALCULADORA</title>
+    <link rel="stylesheet" href="style.css">
+    <title>O MUSGUEIRO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/Imagens/favicon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZBnpP__wO3tmuXb0b9jEWmIv_eYVPEJtj-nQsccH-xg&s);
-        }
-        #cal{
-            width: 300px;
-            text-align: center;
-        }
-        input[type="text"] {
-            width: 100%;
-            height: 90px;
-            font-size: 70px;
-        }
-        input[type="button"] {
-            width: 60px;
-            height: 60px;
-            font-size: 24px;
-            margin: 5px;
-            background-image: linear-gradient( to right, red 25%, green 25%, green 70%, yellow 70%, yellow 80%, blue 80%, blue );
-        }
-
-        #text1{
-            opacity: 0%;
-        }
-            
+      .navbar.navbar-inverse{
+          background-color: blue;
+      }
+      .nav.navbar-nav{
+          background-color: blue;
+      }
+      .navbar-brand{
+          font-size: 50px;
+          transition: 2.5s;
+      }
+      .navbar-brand:hover{
+          font-size: 60px;
+      }
 
     </style>
+
 </head>
 <body>
-    <div id="cal">
-        <input type="text" id="display" readonly>
-        <input type="button" value="7" onclick="addToDisplay('7')">
-        <input type="button" value="8" onclick="addToDisplay('8')">
-        <input type="button" value="9" onclick="addToDisplay('9')">
-        <input type="button" value="+" onclick="addToDisplay('+')">
-        <input type="button" value="4" onclick="addToDisplay('4')">
-        <input type="button" value="5" onclick="addToDisplay('5')">
-        <input type="button" value="6" onclick="addToDisplay('6')">
-        <input type="button" value="-" onclick="addToDisplay('-')">
-        <input type="button" value="1" onclick="addToDisplay('1')">
-        <input type="button" value="2" onclick="addToDisplay('2')">
-        <input type="button" value="3" onclick="addToDisplay('3')">
-        <input type="button" value="*" onclick="addToDisplay('*')">
-        <input type="button" value="C" onclick="clearDisplay()">
-        <input type="button" value="0" onclick="addToDisplay('0')">
-        <input type="button" value="=" onclick="calculate()">
-        <input type="button" value="/" onclick="addToDisplay('/')">
-        <input id="text1" />
+    <div id="a1">
+        <div id="ab1">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">O MUSGUEIRO</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="https://www.google.com/search?q=manoel+gomes&source=lmns&tbm=nws&bih=629&biw=1366&rlz=1C1RXQR_pt-PTBR1073BR1074&hl=pt-BR&sa=X&ved=2ahUKEwiU8abLsNKBAxVwrpUCHTCIDBQQ_AUoA3oECAEQAw">NOTICIAS</a></li>
+                    <li><a href="https://pt.wikipedia.org/wiki/Manoel_Gomes">O GRANDE</a></li>
+                  </ul>
+                </div>
+              </nav>
+            
+        </div>
 
-        <button id="copy">Copy</button>
+        <div id="tst1">
+           <a href="sub1.html"> TESTE #1 </a>
+           <br>
+           <br>
+           <a href="sub2.html"> TESTE #2 </a>
+        </div>
 
-    </div>
+            </div>
 
-    <script>
-        function addToDisplay(value){
-            document.getElementById("display").value += value;
-        }
-        function clearDisplay() {
-            document.getElementById("display").value = "";
-        }
-        function calculate(){
-            try{
-                document.getElementById("display"). value = eval(
-                    document.getElementById("display").value
-                );
-            } catch (error){
-                document.getElementById("display").value = "Error;";
-            }
-        }
-        const textInput = document.getElementById('display');
-        const copyButton = document.getElementById('copy');
+
+        </div>
     
-        copyButton.addEventListener('click', ()=> {
-          textInput.select();
-          document.execCommand('copy');
-        });
-    </script>
+    
 </body>
 </html>
