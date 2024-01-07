@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>CALCULADORA</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZBnpP__wO3tmuXb0b9jEWmIv_eYVPEJtj-nQsccH-xg&s);
+        }
+        #cal{
+            width: 300px;
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            height: 90px;
+            font-size: 70px;
+        }
+        input[type="button"] {
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            margin: 5px;
+            background-image: linear-gradient( to top, red 25%, yellow 70%, yellow 80% );
+            cursor: pointer;
+        }
+
+        #text1{
+            opacity: 0%;
+        }
+
+        #display2{
+            width: 80%;
+            height: 60px;
+            font-size: 50px;
+        }
+
+        input[type="button"]:hover{
+            background-image: linear-gradient( to top, blue 25%, purple 70%, purple 80% );
+        }
+            
+
+    </style>
+</head>
+<body>
+    <div id="cal">
+        <input type="text" id="display2" readonly>
+        <input type="text" id="display" readonly>
+        <input type="button" value="7" onclick="addToDisplay('7')">
+        <input type="button" value="8" onclick="addToDisplay('8')">
+        <input type="button" value="9" onclick="addToDisplay('9')">
+        <input type="button" value="+" onclick="addToDisplay('+')">
+        <input type="button" value="4" onclick="addToDisplay('4')">
+        <input type="button" value="5" onclick="addToDisplay('5')">
+        <input type="button" value="6" onclick="addToDisplay('6')">
+        <input type="button" value="-" onclick="addToDisplay('-')">
+        <input type="button" value="1" onclick="addToDisplay('1')">
+        <input type="button" value="2" onclick="addToDisplay('2')">
+        <input type="button" value="3" onclick="addToDisplay('3')">
+        <input type="button" value="*" onclick="addToDisplay('*')">
+        <input type="button" value="C" onclick="clearDisplay()">
+        <input type="button" value="0" onclick="addToDisplay('0')">
+        <input type="button" value="=" onclick="calculate()">
+        <input type="button" value="/" onclick="addToDisplay('/')">
+        <input type="button" value="." onclick="addToDisplay('.')">
+        <input type="button" value="(" onclick="addToDisplay('(')">
+        <input type="button" value=")" onclick="addToDisplay(')')">
+        <input type="button" value="LM" onclick="convertLitersToMilliliters()">
+        <input type="button" value="CF" onclick="convertCelsiusToFahrenheit()">
+        <input type="button" value="FC" onclick="convertFahrenheitToCelsius()">
+        <input type="button" value="!!" onclick="surpresa()">
+        <input id="text1" />
+
+        <button id="copy">Copiar</button>
+
+    </div>
+
+    <div>
+        <button><a href="AAA2.html">muda</a></button>
+    </div>
+
+    <script>
+
+    a1 = document.getElementById("display")
+
+        function addToDisplay(value){
+//            document.getElementById("display").value += value;
+            document.getElementById("display2").value += value;
+        }
+        function clearDisplay() {
+            document.getElementById("display").value = "";
+            document.getElementById("display2").value = "";
+        }
+        function calculate(){
+            try{
+                document.getElementById("display"). value = eval(
+                    document.getElementById("display2").value
+                );
+            } catch (error){
+                document.getElementById("display").value = "Error;";
+            }
+        }
+        function convertLitersToMilliliters(){
+            var inputValue = parseFloat(document.getElementById("display2").value);
+            if(!isNaN(inputValue)){
+                    var mililiters = inputValue * 1000;
+                    document.getElementById("display").value = mililiters;
+                }
+        }
+        function convertCelsiusToFahrenheit(){
+            var celsius = parseFloat(document.getElementById("display2").value);
+            if(!isNaN(celsius)){
+                    var fahrenheit = (celsius * 9/5) +32;
+                    document.getElementById("display").value = fahrenheit;
+            }
+        }
+        function convertFahrenheitToCelsius(){
+            var f = parseFloat(document.getElementById("display2").value);
+            if(!isNaN(f)){
+                    var c = (f -32) /1.8;
+                    document.getElementById("display").value = c.toFixed(1);
+            }
+        }
+        function surpresa(){            
+            var v = parseFloat(document.getElementById("display2").value);
+            var vv = ((v*200)/2)-(v-(v*v)+200-(10*(3,14)))
+            document.getElementById("display").value = vv;
+        }
+
+
+
+
+
+        const textInput = document.getElementById('display');
+        const copyButton = document.getElementById('copy');
+    
+        copyButton.addEventListener('click', ()=> {
+          textInput.select();
+          document.execCommand('copy');
+        });
+    </script>
+</body>
+</html>
