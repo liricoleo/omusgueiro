@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>O MUSGUEIRO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="/Imagens/favicon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      .navbar.navbar-inverse{
+          background-color: blue;
+      }
+      .nav.navbar-nav{
+          background-color: blue;
+      }
+      .navbar-brand{
+          font-size: 50px;
+          transition: 2.5s;
+      }
+      .navbar-brand:hover{
+          font-size: 60px;
+      }
+
+      #subhome1:hover {
+        animation: shake 0.5s;
+        animation-iteration-count: infinite;
+      }
+      
+      @keyframes shake {
+        0% { transform: translate(2px, 2px) rotate(0deg); }
+        10% { transform: translate(-2px, -3px) rotate(-1deg); }
+        20% { transform: translate(-4px, 1px) rotate(1deg); }
+        30% { transform: translate(4px, 3px) rotate(0deg); }
+        40% { transform: translate(1px, -2px) rotate(1deg); }
+        50% { transform: translate(-1px, 3px) rotate(-1deg); }
+        60% { transform: translate(-3px, 2px) rotate(0deg); }
+        70% { transform: translate(3px, 2px) rotate(-1deg); }
+        80% { transform: translate(-2px, -2px) rotate(1deg); }
+        90% { transform: translate(2px, 3px) rotate(0deg); }
+        100% { transform: translate(2px, -3px) rotate(-1deg); }
+      }
+    </style>
+
+</head>
+<body>
+    <div id="a1">
+        <div id="ab1">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                  <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">O MUSGUEIRO</a>
+                  </div>
+                  <ul class="nav navbar-nav">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="https://www.google.com/search?q=manoel+gomes&source=lmns&tbm=nws&bih=629&biw=1366&rlz=1C1RXQR_pt-PTBR1073BR1074&hl=pt-BR&sa=X&ved=2ahUKEwiU8abLsNKBAxVwrpUCHTCIDBQQ_AUoA3oECAEQAw">NOTICIAS</a></li>
+                    <li><a href="https://pt.wikipedia.org/wiki/Manoel_Gomes">O GRANDE</a></li>
+                  </ul>
+                </div>
+              </nav>
+            
+        </div>
+
+        <div id="home1">
+            <img id="subhome1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTiJwizdp_7kK5GjDIVWsCEaLHINfAbehOkg&usqp=CAU" alt=""
+            height="550" width="366">
+        </div>
+
+    </div>    
+
+    <div id="b1">
+        <button id="c1" onclick="animar()">
+            SUMIU
+        </button>
+        <button id="c2" onclick="animar2()">
+            VOLTO
+        </button>
+    </div>
+  
+  <script>
+      function animar(){
+          const texto = document.getElementById("home1")
+          if (texto.style.opacity === "1"){
+              texto.style.opacity = "0"
+          }else{
+              texto.style.opacity = "0"
+          }
+      }
+        
+            function animar2(){
+          const texto = document.getElementById("home1")
+          if (texto.style.opacity === "0"){
+              texto.style.opacity = "1"
+      }else{
+          texto.style.opacity = "1"
+      }
+  }
+  </script>
+    
+
+            </div>
+
+
+        </div>
+    
+    
+</body>
+</html>
