@@ -128,7 +128,8 @@
         }
         function surpresa(){            
             var v = parseFloat(document.getElementById("display2").value);
-            var vv = ((v*200)/2)-(v-(v*v)+200-(10*(3,14)))
+            var y = Math.floor(Math.random() * 25);
+            var vv = ((v*y)+y)
             document.getElementById("display").value = vv;
         }
 
