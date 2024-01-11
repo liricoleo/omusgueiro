@@ -56,6 +56,31 @@
           transform: rotate(359deg);
         }
       }
+
+      input[type="button"] {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+        background-image: linear-gradient( to top, red 25%, yellow 70%, yellow 80% );
+        cursor: pointer;
+      }  
+
+      input[type="button"]:hover{
+        background-image: linear-gradient( to top, blue 25%, purple 70%, purple 80% );
+      }    
+
+      #display{
+        width: 80%;
+        height: 100px;
+        font-size: 50px;
+      }
+
+      #display2{
+        width: 50%;
+        height: 200px;
+        font-size: 100px;
+        align-items: center;
+      }
     </style>
 
 </head>
@@ -78,11 +103,13 @@
         </div>
 
         <div id="home1">
-            <img id="subhome1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTiJwizdp_7kK5GjDIVWsCEaLHINfAbehOkg&usqp=CAU" alt=""
-            height="550" width="366">
 
-            <img id="subhome2" src="https://st2.depositphotos.com/1049184/5361/i/450/depositphotos_53619755-stock-photo-frightened-businessman-falling-down.jpg" alt=""
-            height="360" width="360">
+            <img id="subhome3" src="">
+            <input type="text" id="display" readonly>
+            <input type="button" value="!!" onclick="sup()">
+            <br>
+            <br>
+            <input type="text" id="display2" readonly>
         </div>
 
     </div>    
@@ -90,6 +117,32 @@
 
 
         </div>
+
+
+        <script>
+        function sup(){            
+          let nome = ["carlos","marcelo","le bunda","jorge","pactun","producto","pikachu","O MEU DEUS",
+          "O SEU DEUS","ronaldo","mariana","parto", " fetu","AAAAAAAAAAA","SILVana","squirth","secsu","otos",
+          "outros","outros entendimento","mim afava","helloo kitty","me salvan","homunculus","pedro","dimas","jesus aaa",
+          "mechupas","contador"];
+
+          let d = [" "," de "," da "," of "," from "]
+
+          let snome = ["silva","von marianus","o rabundo","psicopatun","glob glob","AAAAARG","!!",
+          "amassador","gozaaao","dos 2003 q os cara fala","q os cara fala","> . <","gay","gato","ME QUEBRA"," treis potinhos","treis",
+          "falacia","afabara","drogaria são vicente","  roubaro"," cagaro", " curli"]
+
+          let em = ["😍","😂","😀","😉","😋","😎","😘","🙂","🙄","😏","😣","😥","😭","😧","😬","😈"]
+
+          let fal = [" <poggers"," <noggers"," <pog..."," <nog..."," <muito pica"," <sou fã"]
+
+          document.getElementById("display").value = nome[Math.floor((Math.random()*nome.length))] + d[Math.floor((Math.random()*d.length))] + snome[Math.floor((Math.random()*snome.length))];
+          document.getElementById("display2").value = em[Math.floor((Math.random()*em.length))] + fal[Math.floor((Math.random()*fal.length))];
+
+        }
+
+
+        </script>
     
     
 </body>
