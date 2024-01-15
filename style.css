@@ -7,7 +7,65 @@ body{
     background-size: 200px 100px;
     background-color: white;
     text-align: center;
-    font-size: 35px;
+    font-size: 25px;
+    transition: 2s;
+}
+
+#tst1:hover{
+    background-color: rgb(164, 164, 164);
+    font-size: 28px;
+}
+
+#tst1-2{
+    background-size: 200px 100px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    transition: 2s;
+}
+
+#tst1-2:hover{
+    background-color: rgb(164, 164, 164);
+    font-size: 28px;
+}
+
+#tst1-3{
+    background-size: 200px 100px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    transition: 2s;
+}
+
+#tst1-3:hover{
+    background-color: rgb(164, 164, 164);
+    font-size: 28px;
+}
+
+#tst1-4{
+    background-size: 200px 100px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    transition: 2s;
+}
+
+#tst1-4:hover{
+    background-color: rgb(164, 164, 164);
+    font-size: 28px;
+}
+
+#tst1-5{
+    background-size: 200px 100px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    transition: 2s;
+}
+
+#tst1-5:hover{
+    background-color: rgb(164, 164, 164);
+    font-size: 28px;
 }
 
 #a1{
@@ -23,7 +81,9 @@ body{
     text-align: center;
 }
 
-
+#b2{
+    font-size: 80px;
+}
 
 #c1{
     font-size: 50px;

@@ -6,7 +6,7 @@
     <title>O MUSGUEIRO</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <link rel="icon" type="image/icon" href="/Imagens/favicon">
+    <link rel="icon" type="image/x-icon" href="/Imagens/favicon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
@@ -23,6 +23,13 @@
       }
       .navbar-brand:hover{
           font-size: 60px;
+      }
+
+      #b1{
+        background-size: 200px 100px;
+        background-color: white;
+        text-align: center;
+        font-size: 70px;
       }
 
     </style>
@@ -46,32 +53,37 @@
             
         </div>
 
-        <div id="tst1">
-           <a href="sub1.html"> TESTE #1 </a>
-           <br>
-        </div>
-        <div id="tst1-2">
-           <a href="sub2.html"> TESTE #2 </a>
-           <br>      
-        </div>
-        <div id="tst1-3">
-           <a href="AAA.html">TESTE #3</a>
-           <br>
-        </div>
-        <div id="tst1-4">
-           <a href="sub3.html">TESTE #4</a>
-           <br>
-        </div>
-        <div id="tst1-5">
-            <a href="sub4.html">TESTE #5</a>
-           <br>
+        <div>
+        
+          <h3 id="b1" >LÁ ELE ??? VEZES</h3>
+
+          <br>
+
+          <input type="text" id="scam" >
+          <input type="button" value="!!" onclick="laeles()">
+          <br>
+          <br>
+          <div id="b2">
+            <input type="text" id="display" readonly>
+          </div>
+          
+
+
+
         </div>
 
             </div>
 
 
         </div>
-    
+
+    <script>
+        function laeles(){
+
+            document.getElementById("display").value = ("lá ele"*document.getElementById("scam"));
+
+        }
+    </script>
     
 </body>
 </html>
