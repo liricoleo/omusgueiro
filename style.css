@@ -82,7 +82,11 @@ body{
 }
 
 #b2{
-    font-size: 80px;
+    font-size: 20px;
+}
+
+#display_alt{
+    font-size: 30px;
 }
 
 #c1{
@@ -101,4 +105,13 @@ body{
 
 #c2:hover{
     font-size: 55px;
+}
+
+#scam{
+    font-size: 20px;
+    transition: 1s;
+}
+
+#scam:hover{
+    font-size: 22px;
 }

@@ -32,6 +32,19 @@
         font-size: 70px;
       }
 
+      #bb1{
+        background-size: 200px 100px;
+        background-color: white;
+        text-align: center;
+        font-size: 20px;
+      }
+
+      footer {
+        display: block;
+        text-align: center;
+        padding: 3px;
+        background-color: white;
+      }
     </style>
 
 </head>
@@ -57,17 +70,35 @@
         
           <h3 id="b1" >LÁ ELE ??? VEZES</h3>
 
+          <h2 id="bb1">coloque um numero e LA ELE!!!</h2>
+
+          <br>
           <br>
 
-          <input type="text" id="scam" >
+          <input type="number" value="" id="scam" name="aaa">
           <input type="button" value="!!" onclick="laeles()">
           <br>
           <br>
+          <br>
           <div id="b2">
-            <input type="text" id="display" readonly>
+            <input type="text" id="display_alt" readonly>
           </div>
-          
+          <br>
+          <br>
+          <button type="copy">Copiar</button>
 
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+          <footer>
+            <p>LA ELE</p>
+          </footer>
 
 
         </div>
@@ -80,9 +111,21 @@
     <script>
         function laeles(){
 
-            document.getElementById("display").value = ("lá ele"*document.getElementById("scam"));
+          var scm = document.getElementById("scam").value
+            
+          document.getElementById("display_alt").value = (" lá ele ".repeat(scm));
+
 
         }
+
+
+        const textInput = document.getElementById('display');
+        const copyButton = document.getElementById('copy');
+    
+        copyButton.addEventListener('click', ()=> {
+          textInput.select();
+          document.execCommand('copy');
+        });
     </script>
     
 </body>
