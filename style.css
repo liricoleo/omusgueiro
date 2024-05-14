@@ -68,6 +68,19 @@ body{
     font-size: 28px;
 }
 
+#tst1-6{
+    background-size: 200px 100px;
+    background-color: white;
+    text-align: center;
+    font-size: 25px;
+    transition: 2s;
+}
+
+#tst1-6:hover{
+    background-color: rgb(164, 164, 164);
+    font-size: 28px;
+}
+
 #a1{
     text-align: center;
 }
